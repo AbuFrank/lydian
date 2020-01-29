@@ -1,0 +1,1907 @@
+/*!
+Author: Creative Blazer
+Author URI: creativeblazer.com
+Description: Custom styling for Lydian Center
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography
+# Front Page
+# Hero
+# About
+# General Page
+# Header
+# Footer
+# For Children Archive Page
+# Service Archive Page
+# Service Single Page
+# Practitioner Sidebar
+# Practitioner Archive Page
+# Practitioner Single Page
+# Testimonial Archive Page
+# Testimonial Single Page
+# Contact
+# Forms Page
+# Book Archive Page
+# Sidebar styling
+# Responsive
+	## Typography
+	## Service Single Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+html {
+	/* Adjust font size */
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	/* Font varient */
+	font-variant-ligatures: none;
+	-webkit-font-variant-ligatures: none;
+	/* Smoothing */
+	text-rendering: optimizeLegibility;
+	-moz-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+html body {
+	color: #36454F; /*charcoal*/
+	font-size: 17px;
+	line-height: 1.55;
+	font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Crimson Text', serif;
+	color: #258039;
+	color: rgb(39, 115, 117);
+}
+h1 {
+	font-size: 2.5rem;
+	color: #FFCC00;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.65rem;
+}
+h4 {
+	font-size: 1.4rem;
+}
+h5 {
+	font-size: 1.2rem;
+}
+ul {
+	margin: 20px;
+	padding: 10px;
+}
+
+ol {
+	margin: 0;
+}
+a, a:visited {
+	color: #F4A261; /*footer orange*/
+}
+a:hover, a:focus {
+	color: #277375; /*cb bar teal*/
+	text-decoration: underline;
+	outline: none;
+}
+
+@font-face {
+	font-family: "OPTIEve Heavy";
+	src: url(/wp-content/themes/Lydian-Center/fonts/OPTIEve-Heavy.woff);
+	font-weight: normal;
+}
+@font-face {
+	font-family: "OPTIEve Light";
+	src: url(/wp-content/themes/Lydian-Center/fonts/OPTIEve-Light.woff);
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Apple Chancery";  
+	src: url(/wp-content/themes/Lydian-Center/fonts/Apple-Chancery.woff);  
+	font-weight: normal;  
+}
+/* Sliding Background Button */
+.cb-slide-button,
+input[type="reset"], 
+input[type="submit"],
+input[type="reset"]:focus, 
+input[type="submit"]:focus {
+	display: inline-block;
+	color: #B56322;
+	border: 2px solid #DB8948;
+	margin-top: 1rem;
+	padding: .25rem .75rem;
+	font-size: 1.35rem;
+	min-width: 250px;
+	max-width: 510px;
+	cursor: pointer;
+	font-family: 'Crimson Text', serif;
+	background: linear-gradient(to left, white 50%, #DB8948 50%);
+	letter-spacing: 1px;
+	background-size: 201% 100%;
+	background-position:right bottom;
+	transition:all .25s ease;
+}
+input[type="reset"], 
+input[type="submit"] {
+	height: 45px;
+	width: 100%;
+	max-width: 450px;
+}
+.cb-slide-button:hover {
+	background-position:left bottom;
+	color: white;
+}
+input[type="reset"]:hover, 
+input[type="submit"]:hover {
+	border: 3px solid #DB8948;
+}
+
+.cb-darken-button{
+	display: inline-block;
+	background-color: white;
+	margin-top: 1rem;
+	font-family: 'Crimson Text', serif;
+	font-size: 1.5rem;
+	letter-spacing: .5px;
+}
+
+/*--------------------------------------------------------------
+# Front Page
+--------------------------------------------------------------*/
+.front-page-section {
+	padding-bottom: 2rem;
+}
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+/*Curved Corners*/
+#hero {	
+	position: relative;
+	height: calc(100vh - 82px);
+	max-height: 56.25vw;/*same height as slider photos 16/9 aspect ratio*/
+}
+#hero #cb-curved-corners {
+	position: absolute;
+	height: 260px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.1);
+	z-index: 1;
+}
+/*owl slider*/
+.cb-slider {
+	position: absolute;
+}
+#hero .owl-nav,
+#hero .owl-dots {
+	position: absolute;
+	color: #fff;
+	width: 100%;
+	display: flex;
+}
+.owl-nav {
+	top: 27vw;
+	justify-content: space-between;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.owl-dots {
+	bottom: 0;
+	justify-content: center;
+}
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+#front-page-about {
+	position: relative;
+	background: #fff;
+	padding-bottom: 5rem;
+	padding-top: 7rem;
+	z-index: 1;
+}
+.about-title {
+	margin-bottom: 1.25rem;
+}
+#front-page-about .cb-slide-button {
+	background: linear-gradient(to left, #358182 50%, white 50%);
+	background-size: 200% 100%;
+    background-position: right bottom;
+	border-color: #fff;
+	color: #fff;
+}
+#front-page-about .cb-slide-button:hover {
+	background-position: left bottom;
+	color: #358182;
+}
+/*--------------------------------------------------------------
+# Front Page Testimonials
+--------------------------------------------------------------*/
+#front-page-testimonials {
+	background: #fff;
+	padding-top: 2rem;
+}
+.frontpage-testimonial-client {
+	padding-left: 1rem;
+}
+.frontpage-testimonial-name {
+	width: 128px;
+	text-align: right;
+}
+/*--------------------------------------------------------------
+# General Page
+--------------------------------------------------------------*/
+/*allow space above content when using in-page navigation*/
+.nav-to {
+	height: 100px;	
+	margin-top: -100px;
+	/*tuck it behind content*/
+	position: absolute;
+	z-index: -1;
+}
+/*cb-bar positions below title in mobile*/
+.page-title-box {
+	position: relative;
+}
+.page-title-box .cb-bar {
+	top: 100%;
+	left: 15%;
+	right: 15%;
+}
+/*include diamonds on all page/section titles and cb-bars*/
+.page-title-box .cb-bar:before, 
+.page-title-box .cb-bar:after,
+.practitioner-info-box .cb-bar:before {
+	content: "";
+	position: absolute;
+	top: -8px;
+	width: 16px;
+	height: 18px;
+	background: url("img/cb-fancy-diamond-42x56.png") no-repeat;
+	background-size: contain;
+}
+.page-title-box .cb-bar:before {
+	left: -10px;
+}
+.page-title-box .cb-bar:after {
+	right: -10px;
+}
+/*all practitioners page*/
+.practitioner-info-box .cb-bar:before {
+	right: 8px;
+}
+
+/*--------------------------------------------------------------
+# Header Styling
+--------------------------------------------------------------*/
+/* make space for fixed header */
+#content {
+	padding-top: 82px;
+	padding-bottom: 2rem;
+	position: relative;
+}
+.home #content {
+	padding-top: 82px;
+	padding-bottom: 0;
+}
+/* when logged in */
+.admin-bar #masthead {
+	padding-top: 32px;
+}	
+/* allow box shadow to lay over carousel section below */
+#masthead {
+	z-index: 111;
+}
+/* site title */
+.site-title {
+	font-size: 1.45rem;
+	font-family: "OPTIEve Heavy";
+	margin-bottom: .3rem;
+}
+/*THE and FOR articles*/
+.site-branding .part-1 {
+	font-family: "Apple Chancery";
+	font-size: 1rem;
+}
+.site-branding span {
+	padding-right: 5px;
+}
+.site-description {
+	font-family: "OPTIEve HEAVY";
+	font-size: .86rem;
+	margin-bottom: 0;
+}
+.site-description .part-1 {
+	padding-left: 1px;
+	padding-right: 7px;
+}
+/* color and spacing to match header branding */
+.site-title a,
+.site-description {
+	background: #fff;
+	background: #8fd286;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	color: #0D250D;
+	text-decoration: none;
+}
+/* menu background matches branding */
+.custom-toggler .navbar-toggler {
+	border-color: rgba(0, 59, 0, .5);
+}
+.custom-toggler .navbar-toggler-icon {
+	color: rgba(0, 59, 0, .5);
+}
+#primary-menu a {
+	color: #277375;
+}
+/* header contact info */
+#contact-addy {
+	font-size: 20px;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	opacity: 0;
+}
+#contact-phone-mobile {
+	margin-right: 2rem;
+	text-align: center;
+}
+#contact-phone-mobile p {
+	margin-bottom: 0;
+}
+/* ---------bars and diamonds in navbar header------- */
+#header-graphic {
+	/*box-shadow: 0 0px 15px -4px rgba(0,0,0,0.5);*/
+	background: #8fd286;
+	height: 129px;
+	position: absolute;
+	width: 100vw;
+}
+/*box shadow pseudoclass so that it can move z independent of graphics*/
+#header-graphic:before {
+	content: "";
+	position: absolute;
+	/*box-shadow: 0 0px 15px -4px rgba(0,0,0,0.5);*/
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+/* for header bar #3 and page header bars */
+.cb-bar {
+	height: 2px;
+	/*background-color: #1a4b1a;*/
+	background: #258039; /* bright green */
+	position: absolute;
+	top: 48%;
+}
+/* -------------Front Page Header Bars------------ */
+/* bars 1 and 2*/
+.cb-bar-1,
+.cb-bar-2 {
+	height: 17px;
+	width: 40%;
+	position: absolute;
+	border-bottom: solid 2px #1a4b1a;
+	margin-left: 2rem;
+}
+/* make bar 1 visible over site title's background */
+.cb-bar-1 {
+	z-index: 1;
+}
+.cb-bar-2 {
+	top: 24px;
+	width: 50%;
+}
+/*left diamonds for bars 1 and 2	*/
+.cb-bar-1:before,
+.cb-bar-2:before {
+	content: "";
+	position: absolute;
+	left: -9px;
+	bottom: -10px;
+	width: 16px;
+	height: 18px;
+	background: url("img/cb-fancy-diamond-42x56.png") no-repeat;
+	background-size: contain;
+}
+/*left diamonds for bars 1 and 2*/
+.cb-bar-1:after,
+.cb-bar-2:after {
+	content: "";
+	position: absolute;
+	right: -9px;
+	bottom: -10px;
+	width: 16px;
+	height: 18px;
+	background: url("img/cb-fancy-diamond-42x56.png") no-repeat;	
+	background-size: contain;
+}
+/* bar 3 - middle bar */
+.cb-bar-3 {
+	left: 0;
+	right: 0;
+	margin-right: 2rem;
+	margin-left: 2rem;
+}
+/*left diamond for bar 3*/
+.cb-bar-3:before {
+	content: "";
+	position: absolute;
+	top: -8px;
+	left: -9px;
+	width: 16px;
+	height: 18px;
+	background: url("img/cb-fancy-diamond-42x56.png") no-repeat;
+	background-size: contain;
+}
+/*right diamond for bar 3*/
+.cb-bar-3:after {
+	content: "";
+	position: absolute;
+	top: -8px;
+	right: -9px;
+	width: 16px;
+	height: 18px;
+	background: url("img/cb-fancy-diamond-42x56.png") no-repeat;
+	background-size: contain;
+}
+/*bars 4 and 5*/
+.cb-bar-4,
+.cb-bar-5 {
+	height: 20px;
+	position: absolute;
+	border-top: solid 2px #1a4b1a;
+	margin-left: 2rem;
+	/*border-top-right-radius: 20px;
+	border-right: solid 3px #1a4b1a;*/
+}
+.cb-bar-4 {
+	width: 50%;
+	top: 85px;
+}
+.cb-bar-5 {
+	width: 40%;
+	top: 108px;
+}
+/*left diamonds for bars 4 and 5*/
+.cb-bar-4:before,
+.cb-bar-5:before {
+	content: "";
+	position: absolute;
+	left: -9px;
+	top: -10px;
+	width: 16px;
+	height: 18px;
+	background: url("img/cb-fancy-diamond-42x56.png") no-repeat;
+	background-size: contain;
+}
+/*right diamonds for bars 4 and 5*/
+.cb-bar-4:after,
+.cb-bar-5:after {
+	content: "";
+	position: absolute;
+	right: -9px;
+	top: -10px;
+	width: 16px;
+	height: 18px;
+	background: url("img/cb-fancy-diamond-42x56.png") no-repeat;
+	background-size: contain;
+}
+/*scroll and no scroll are triggered when the page is scrolled from and to the top*/
+.scrolled .site-description p {
+	opacity: 0;
+	transition: opacity .1s ease-in-out .4s;
+}
+.no-scroll .site-description p {
+	opacity: 1;
+	transition: opacity .2s ease-in-out .3s;
+}
+/*height*/
+#masthead.no-scroll {
+	transition: height .5s ease-in-out;
+}
+.no-scroll #header-graphic {
+	transition: height .5s ease-in-out;
+}
+.scrolled #header-graphic {
+	height: 82px;
+	transition: all .5s ease-in-out;
+}
+/*hide-show bars 2 & 4*/
+.no-scroll .cb-bar-2,
+.no-scroll .cb-bar-4 {
+	opacity: 1;
+	transition: opacity .2s ease-in-out .3s;
+}
+.scrolled .cb-bar-2,
+.scrolled .cb-bar-4 {
+	opacity: 0;
+	transition: opacity .1s ease-in-out;
+}
+/*bar 3 extend and retract*/
+.no-scroll .cb-bar-3 {
+	z-index: 1;
+	transition: all .4s ease-in-out .1s;
+}
+.scrolled .cb-bar-3 {
+	margin-right: 25rem;
+	z-index: 0;
+	transition: margin-right .5s;
+}
+/*bar 5 placement*/
+.cb-bar-5 {
+	z-index: 1;/*keep it visible above site title*/
+}
+.no-scroll .cb-bar-5 {
+	transition: top .5s ease-in-out;
+}
+.scrolled .cb-bar-5 {
+	top: 62px;
+	transition: top .5s ease-in-out;
+}
+/*adjust primary menu with shrinking and growing site header*/
+#cb-collapsing-nav #primary-menu {
+	margin:0;
+	padding:0;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer-map {
+	margin-left: auto;
+	margin-right: auto;
+}
+#sub-footer {
+	background-color: #2B4B94; /*Monday blue*/
+	background-color: #1A59A1; /*bootstrap-y blue*/
+	color: white;
+	padding-bottom: 26px;
+}
+#sub-footer h2 {
+	color: white;
+}
+#footer-mission p {
+	font-size: 1.2rem;
+}
+#footer-actions .card {
+	min-width: 275px;
+}
+#footer-actions .card a {
+	color: white;
+	text-decoration: none;
+}
+#footer-actions .button-1 {
+	font-size: 1.1rem;
+}
+/* bottom strip of info with copyright and our link */
+.site-info {
+	background-color: #B9D6F2; /*light blue*/
+	color: black;
+}
+/* Makes the link to our website also black */
+.site-info a {
+	color: black;
+}
+/*--------------------------------------------------------------
+# For Children Page
+--------------------------------------------------------------*/
+/*hide/show modality menu when button is not/active*/
+.mod-menu {
+	display: none;
+}
+.show.mod-menu {
+	display: block;
+}
+/*keep modality menu below site header when dropped down*/
+.mod-menu[x-placement=bottom-start] {
+	z-index:1;
+}
+.mod-menu-button {
+	cursor: pointer;
+}
+.card-header {
+	position: relative;
+	border-bottom: 0px;
+}
+.card-header:hover {
+	text-decoration: none;
+	background: #DB8948;
+}
+.card-header:focus {
+	text-decoration: none;
+}
+/*age group titles*/
+.infants .card-header h2 {
+	font-size: 2rem;
+	font-family: 'Crimson Text', serif;
+	color: white;
+	text-shadow: 1px 1px 1px #808080;
+	margin-bottom: 0;
+}
+.gradeschool .card-header h2,
+.preschoolers .card-header h2 {
+	font-size: 2rem;
+	font-family: 'Crimson Text', serif;
+	color: white;
+	text-shadow: 1px 1px 1px #666666;
+	margin-bottom: 0;
+}
+.teenager .card-header h2 {
+	font-size: 2rem;
+	font-family: 'Crimson Text', serif;
+	color: white;
+	text-shadow: 1px 1px 1px #333;
+	margin-bottom: 0;
+}
+/*animated plus minus icon for displaying more info*/
+.plus-minus-toggle {
+	width: 26px;
+	cursor: pointer;
+	position: absolute;
+	right: 1.25rem;
+	top: 0;
+	bottom: 0;
+}
+.plus-minus-toggle:before,
+.plus-minus-toggle:after {
+	content: "";
+	border-radius: 3px;
+	height: 5px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	left: 0;
+	transition: transform .5s ease;
+	transform-origin: center;
+}
+.collapsed .plus-minus-toggle:before {
+	transform: rotate(90deg);
+}
+.collapsed .plus-minus-toggle:after {
+	transform: rotate(180deg);
+}
+.card-body {
+	padding: 0;
+}
+.card-body ul {
+	margin: 0;
+	padding: 0;
+}
+/*for DRY
+#accordion>.card {
+	background-color: #66A5ED;
+}*/
+ul.mod-menu {
+	border: none;
+}
+.infants,
+.outer-infants-container,
+.infants .nav-tabs {
+	background-color: #66A5ED;
+}
+.infants .nav-tabs {
+	/*border: none;*/
+}
+.preschoolers,
+.outer-preschoolers-container,
+.preschoolers .nav-tabs {
+	background-color: #4D8CD4;
+}
+.preschoolers .nav-tabs {
+	/*border-top: #4D8CD4 10px solid;
+	border-left: #4D8CD4 15px solid;*/
+}
+.gradeschool,
+.outer-gradeschool-container,
+.gradeschool .nav-tabs {
+	background-color: #3372BA;
+}
+.gradeschool .nav-tabs {
+	/*border-top: #3372BA 10px solid;
+	border-left: #3372BA 15px solid;*/
+}
+.teenager,
+.outer-teenager-container,
+.teenager .nav-tabs {
+	background-color: #1A59A1;
+}
+.teenager .nav-tabs {
+	/*border-top: #1A59A1 10px solid;
+	border-left: #1A59A1 15px solid;*/
+}
+.inner-age-group-container {
+	/*background-color: white;*/
+}
+.nav-link {
+	color: white;
+}
+.nav-tabs .nav-link:hover {
+	background: rgba(255,255,255,.5);
+	border-color: rgba(255,255,255,0);
+	color: #351F39; /* purple */
+}
+.nav-tabs .nav-link.active:hover {
+	background: #fff;
+}
+.tab-content {
+	background: #fff;
+	padding-top: 1.5em;
+}
+.tab-pane.active {
+	padding-bottom: .001rem;
+}
+#forchildren-thecontent {
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+/*--------------------------------------------------------------
+# Service Archive Page
+--------------------------------------------------------------*/
+.row.service-row {
+	margin-bottom: 4rem;
+}
+.service-row h2 {
+	font-size: 2rem;
+}
+/*--------------------------------------------------------------
+# Service Single Page
+--------------------------------------------------------------*/
+.service-header-img {
+	height: calc(100vw / 4);
+    overflow: hidden;
+}
+.service-header-img img {
+	position: relative;
+    top: -50%;
+}
+/*convert page headers to inline to show fancy-bars beneath*/
+.service-header-title h2 {
+	padding: 5px 5px 0;
+   display: inline-block;
+}
+.service-header-title {
+	text-align: center;
+}
+.sidebar-text {
+	margin-bottom: 1.8rem;
+	position: relative;
+}
+.schedule-appt-button {
+	display: inline-block;
+	color: white;
+	background-color: #DB8948;
+	letter-spacing: 1px;
+	margin-top: 1rem;
+	padding: .25rem .75rem;
+	font-size: 1.35rem;
+	min-width: 250px;
+	max-width: 510px;
+	font-family: 'Crimson Text', serif;
+}
+.schedule-appt-button:hover,
+.schedule-appt-button:active,
+.schedule-appt-button:focus,
+.schedule-appt-button:visited  {
+	/*color: #B56322;*/
+	color: white;
+}
+.schedule-appt-wrapper a,
+.schedule-appt-wrapper a:hover,
+.schedule-appt-wrapper a:active,
+.schedule-appt-wrapper a:focus,
+.schedule-appt-wrapper a:visited {
+		text-decoration: none;
+}
+/*--------------------------------------------------------------
+# Practitioner Archive Page
+---------------------------------------------------------------*/
+.practitioner-tile {
+	border: 3px solid transparent;
+	padding: 15px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.knutson-block .practitioner-tile {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.practitioner-tile a,
+.practitioner-tile a:visited {
+	color: #003b00;
+}
+
+.practitioner-tile a:hover,
+.practitioner-tile a:focus {
+	color: #003b00;
+	text-decoration: none;
+}
+a.knutson-block,
+a.knutson-block:hover,
+a.knutson-block:focus,
+a.knutson-block:visited {
+	color: #003b00;
+	text-decoration: none;
+}
+/*remove extra padding for knutson block on medium screens*/
+.knutson-block .practitioner-tile {
+	padding-left: 0;
+	padding-right: 0;
+}
+h5.service-index-name {
+	color: #003b00;
+}
+/*remove bullets, paddings, and margins*/
+.practitioner-info-box ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.practitioner-info-box h3 {
+	color: #004A4C;
+	color: #733727; /*red-brown just like site title*/
+}
+.practitioner-info-box li {
+	color: #002123;
+}
+/* smooth slide transform on tile hover */
+.practitioner-tile:hover {
+	border-color: #277375;
+}
+/*----- bars and diamonds in front of practitioner info hide until hover -----*/
+.practitioner-info-box {
+	position: relative;
+	overflow: hidden;
+	padding-top: 1.05rem;
+	/* transition in off-hover effect as well */
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.practitioner-tile .cb-bar {
+	background: #1a4b1a; /*dark green*/
+	width: 50px;
+	/* hide bars and diamonds to left of info box by default */
+	left: -58px;
+	/* make the off-hover event smooth as well - left positioning */
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* show the bars and diamonds when user hovers */
+.practitioner-tile:hover .cb-bar {
+	left: 0px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* make room for bars and diamonds as they slide in from the left */
+.practitioner-tile:hover .practitioner-info-box {
+	padding-left: 58px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* line each bar up with respective line of text in info box */
+.practitioner-tile .p-bar-1 {
+	top: 34px;
+}
+.practitioner-tile .p-bar-2 {
+	top: 61px;
+}
+.practitioner-tile .p-bar-3 {
+	top: 87px;
+}
+.practitioner-tile .p-bar-4 {
+	top: 113px;
+}
+/*---------------------------------------------------
+# Practitioner Sidebar
+---------------------------------------------------*/
+.practitioner-image {
+	margin-bottom: .5rem;
+}
+.practitioner-image img {
+	width: 100%;
+}
+.sidebar-practitioner-name {
+	display: inline-block;
+}
+.sidebar-text {
+	/*margin-left: 1.5rem;*/
+	margin-bottom: 1.75rem;
+}
+/* remove column padding on small devices */
+.sidebar-text .sidebar-content-wrapper {
+	padding-left: 0;
+	padding-right: 0;
+}
+@media(min-width: 1200px) {
+	.sidebar-text .sidebar-content-wrapper {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+.tel-contact {
+	border: 2.5px solid #277375;
+	padding-top: 15px;
+	margin-top: 30px;
+	text-align: center;
+	font-family: 'Crimson Text', serif;
+	font-size: 22px;
+}
+.hh-forms-link-show {
+	margin-top: 15px;
+	display: block;
+	font-size: 24px;
+	font-family: 'Crimson Text', serif;
+}
+.hh-forms-link-hide {
+	display: none;
+}
+.testimonials-cta {
+	margin-left: auto;
+	margin-right: auto;
+}
+/*--------------------------------------------------------------
+# Testimonial Archive Page
+--------------------------------------------------------------*/
+/* turn each content block into tiles */
+.page-template-archivish-testimonials .site-content {
+	background: #fff;
+}
+#testimonial-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-width: 175px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+}
+.page-title-box {
+	margin: 2rem 0;
+}
+/*hide extra testimonials affect*/
+.testimonial-blocks {
+	overflow:hidden;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;;
+}
+.testimonial-section .read-more-button .cb-slide-button {
+	margin-bottom: 3rem;
+	margin-top: 0;
+}
+.testimonial-section .practitioner-info img,
+.asm-testimonial-section .practitioner-info img {
+	border-radius:5px;
+}
+/*bring text and signee closer to quotation mark icon*/
+.testimonial-box {
+	margin-bottom: 1rem;
+}
+.testimonial-box .text-right {
+	padding-right: 15px;
+}
+.practitioner-info {
+	margin-bottom: 1rem;
+}
+/*back to top button*/
+#back-to-top {
+	background: #fff;
+	opacity: 0;
+	transition: opacity .3s ease-in;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	height: 41px;
+	width: 41px;
+	border: solid 2px #277375;
+}
+#back-to-top.appear {
+	opacity: 1;
+	transition: opacity .3s ease-in;
+}
+#back-to-top.stick {
+	position: absolute;
+}
+/*back to top arrow*/
+#back-to-top .back-top-arrow {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -4px 0 0 -10px;
+	border-top: solid 2px #277375;
+	border-right: solid 2px #277375;
+	transform: rotate(-45deg);
+}
+/*--------------------------------------------------------------
+# Forms Page - is built on wp page
+--------------------------------------------------------------*/
+/*prevent oversized input elements from breaking the fourth wall*/
+.health-history-forms {
+	margin-bottom: 2.5rem;
+}
+.form-uploads {
+	overflow: hidden;
+}
+.form-uploads .col-sm-6 {
+	padding-bottom: .3rem;
+}
+#secure-email-form .upload-title {
+	padding-bottom: .5rem;
+}
+/*hide ugly buttons with overlay*/
+.form-uploads input:after {
+	border-radius: 3px;
+	content:'Choose File';
+	position:absolute;
+	top:0;
+	left: 7px;
+	width: 112px;
+	height: 31px;
+	background: #277375;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*--------------------------------------------------------------
+# Book Archive Page
+--------------------------------------------------------------*/
+.book-section {
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.book-section img {
+	border: solid #333 1px;
+	max-width: 200px;
+	text-align: center;
+}
+.book-section .author {
+	text-align: center;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.book-column {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+#secure-email-form,
+#ppl-contact-section {
+	margin-top: 2.5rem;
+}
+.ppl-contact-info a {
+	color: #00281f;
+}
+.contact-form input {
+	width: 100%;
+	height: 45px;
+	border: solid rgb(39, 115, 117) 1.5px;
+	margin-bottom: 1.3rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+	color: #00281f;
+}
+.contact-form textarea {
+	height: 100%;
+	border: solid rgb(39, 115, 117) 1.5px
+}
+#contact-page-form .row:nth-child(3) .col-sm-3 input {
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+/* Extra-small devices */
+@media(max-width: 575px) {
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.7rem;
+	}	
+	h3 {
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.2rem;
+	}
+	.page-title {
+		text-align: center;
+	}
+	/*--------------------------------------------------------------
+	# Header
+	--------------------------------------------------------------*/
+	.site-title a,
+	.site-description {
+		padding-left: 0;
+	}
+	/*--------------------------------------------------------------
+	# Hero
+	--------------------------------------------------------------*/
+	#hero .owl-nav i {
+		/*make nav buttons smaller*/
+		font-size: 1.5em;
+	}
+	/*--------------------------------------------------------------
+	# Front Page About
+	--------------------------------------------------------------*/
+	#front-page-about {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	/*--------------------------------------------------------------
+	# Sidebar styling
+	--------------------------------------------------------------*/
+	.sidebar-content {
+		text-align: center;
+	}
+	.sidebar-content ul {
+		list-style-type: none;
+	}
+	.schedule-appt-button {
+		cursor: pointer;
+	}
+	/*--------------------------------------------------------------
+	# For Children
+	--------------------------------------------------------------*/
+	/*give space for content*/
+	.page-template-archivish-for-children #accordion {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+}
+
+@media(min-width:576px) {
+	/*--------------
+	# page header stuff
+	-----------------*/
+	.site-title{
+		font-size: 2rem;
+	}
+	.site-description {
+		font-size: 1.19rem;
+	}
+	/*--------------------------------------------------------------
+	# Books Page
+	--------------------------------------------------------------*/
+	/*make author header full width to force content wrap and start new line*/
+	.book-section .author {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.book-column {
+		margin-bottom: 4rem;
+	}
+	#testimonial-menu {
+		padding-left: 0;
+	}
+}
+@media(max-width: 767px){
+	.ppl-contact-info {
+		margin-top: 2rem;
+	}
+	/*-----------------------------------------
+	# Header
+	-----------------------------------------*/
+
+	/*-----------------------------------------
+	# Footer
+	-----------------------------------------*/
+	#footer-mission {
+		max-width: 550px;
+		margin: 2.25rem auto 0;
+	}
+	#footer-actions .footer-buttons {
+		margin: 1.25rem auto;
+	}
+	/*-----------------------------------------
+	     All Services Index
+	-----------------------------------------*/
+	.service-index-title {
+		text-align: center;
+	}
+	/*--------------------------------------------------------------
+	# Books
+	--------------------------------------------------------------*/
+	.book-image img {
+		max-width: 255px;
+		margin-bottom: 25px;
+	}
+}
+
+/* Medium devices */
+@media(min-width: 768px) {
+	/*--------------------------------------------------------------
+	# General Page
+	--------------------------------------------------------------*/
+	/*page headers with diamond-bar graphic*/
+	.page-title-box {
+		position: relative;
+	}
+	.page-title-box h1,
+	.page-title-box h2 {
+		background: #fff;
+		display: inline-block;
+		padding-left: 1rem;
+		padding-right: 1rem; 
+		position: relative;
+	}
+	.page-title-box .cb-bar {
+		top: 50%;
+	}
+	.sidebar-margin {
+		margin-left: 38px;
+	}
+	/*--------------------------------------------------------------
+	# Footer
+	--------------------------------------------------------------*/
+	#footer-mission {
+		max-width: 650px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	/*-----------------------------------------
+	     All Services Index
+	-----------------------------------------*/
+	.row .service-index-title {
+		text-align: right;
+	}
+	/*--------------------------------------------------------------
+	# For Children
+	--------------------------------------------------------------*/
+	.card-header h2 {
+		font-size: 2rem;
+	}
+	.plus-minus-toggle {
+		width: 30px;
+	}
+	/*--------------------------------------------------------------
+	# Practitioner Archive Page
+	--------------------------------------------------------------*/
+	/*vertical alignment of knuston info when adjacent to photo*/
+	.knutson-block .practitioner-info-box {
+		padding-top: 0;
+	}
+	.knutson-block .p-bar-1 {
+		top: 48px;
+		top: 21px;
+	}
+	.knutson-block .p-bar-2 {
+		top: 76px;
+		top: 48px;
+	}
+	.knutson-block .p-bar-3 {
+		top: 102px;
+		top: 74px;
+	}
+	.knutson-block .p-bar-4 {
+		top: 128px;
+		top: 100px;
+	}
+	/*--------------------------------------------------------------
+	# Testimonial Archive Page
+	--------------------------------------------------------------*/
+	/*add bar and diamond behind each practitioner's name*/
+	.search-by-practitioner {
+		position: relative;
+		height: 2rem;
+	}
+	.search-by-practitioner a {
+		background: #fff;
+		position: relative;
+		top: 3px;
+		left: 20px;
+		z-index: 1;
+		padding-left: 7px;
+		padding-right: 8px;
+	}
+	.testimonial-menu-tile .cb-bar {
+		left: 25px;
+		transition: left .2s ease-in-out;
+		-webkit-transition: left .2s ease-in-out;
+		-moz-transition: left .2s ease-in-out;
+		-ms-transition: left .2s ease-in-out;
+		-o-transition: left .2s ease-in-out;
+	}
+
+	.testimonial-section,
+	.asm-testimonial-section {
+		background: #fff;
+		border-radius: 5px;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		margin: 0 -15px 1rem -15px;
+	}
+	.nav-to {
+		margin-top: -142px;
+	}
+	.page-title-box {
+		background: #fff;
+		border-radius: 5px;
+		margin: 2rem -15px;
+	}
+	/*floating side menu*/
+	.testimonial-menu-container {
+		position: relative;
+		margin-bottom: 17px;
+		border-radius: 5px;
+	}
+	/*general layout, sizing, and spacing for side menu content box and background*/
+	.testimonial-menu-tile {
+		position: static;
+		border-radius: 5px;
+		width: 200px;
+		padding: 1rem;
+		margin-left: -15px;
+		height: calc(100vh - 191px);
+		background: #fff;
+		top:141px;
+		padding-left: 0;
+	}
+	.testimonial-menu-tile.mid-fixed {
+		position: fixed;
+	}
+	/*for when the user reaches the footer and the menu sticks back on the page*/
+	.testimonial-menu-tile.bottom {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+	}
+	.inner-age-group-container {
+		margin: 2em 1em; 
+	}
+	/*Forms*/
+	/*alignment of file attachment buttons*/
+	#contact-page-form .row:nth-child(3) .col-sm-3 input {
+		padding-left: 0px;
+		overflow: hidden;
+	}
+} /*end media query*/
+
+
+@media (max-width: 991px) {
+/*All Services Index*/
+/*Text align center only when multiple service buttons are on 2 lines*/
+	.service-row .button-container {
+		text-align: center;
+	}
+	.service-row .cb-slide-button {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+/* Large devices and screens */
+@media(min-width: 992px) {
+	/*--------------------------------------------------------------
+	## Typography
+	--------------------------------------------------------------*/
+	h1 {
+		font-size: 2.887em;
+	}
+	 h2 {
+		font-size: 2.271em;
+	}
+	 h3 {
+		font-size: 1.802em;
+	}
+	 h4 {
+		font-size: 1.424em;
+	}
+	 h5 {
+		font-size: 1.125em;
+	}
+	 h6 {
+		font-size: 1em;
+	}
+	/*--------------------------------------------------------------
+	# General Page
+	--------------------------------------------------------------*/
+	/*make room for the lower menu*/
+	.site-content {
+		padding-top: 3rem;
+	}
+	/*no need for extra space on home*/
+	.home .site-content {
+		padding-top: 0;
+	}
+	/*alignment of site title and tagline amongst bars and diamonds*/
+	.site-branding {
+		padding-top: 12px;
+	}
+	.site-title {
+		margin-bottom: 14px;
+	}
+	/*--------------------------------------------------------------
+	# Header Nav
+	--------------------------------------------------------------*/
+	#page #masthead {
+		background: transparent;
+	}
+	/* part of the squisheader animation */
+	.scrolled .site-description {
+		opacity: 0;
+		transition-delay: .1s;
+	}
+	.no-scroll .site-description {
+		opacity: 1;
+		transition-delay: .3s;
+		background: transparent;
+	}
+	.scrolled #cb-collapsing-nav {
+		top: 81px;
+		transition: top .5s ease-in-out;
+	}
+	/*phone number moves to center of parent element*/
+	.scrolled #contact-phone {
+		top: 23px;
+		transition: top .5s ease-in-out;
+	}
+	#cb-collapsing-nav {
+		position: absolute;
+		top: 128px;
+		width: 100%;
+		left: 0;
+		right: 0;	
+	}
+	/*primary menu vertical placement*/
+	.no-scroll #cb-collapsing-nav {
+		transition: top .5s ease-in-out;
+	}
+	/*create full-width backdrop for menu*/
+	#header-graphic::after {
+		content: '';
+		position: absolute;
+		background: #277375;
+		left: 0;
+		right: 0;
+		bottom: -39px;
+		height: 39px;
+	}
+	/* size and styles of main list menu */
+	#masthead #cb-collapsing-nav #primary-menu {
+		color: #fff;
+		position: relative;
+		padding-left: 32px;
+		padding-right: 32px;
+		font-size: 1.25rem;
+		width: 100%;
+		justify-content: center;
+	}
+	/*first tier menu items*/
+	#primary-menu > li > a {
+		border: solid 2px transparent;
+		color: #fff;
+		/*position: relative;*/
+		line-height: 1;
+	}
+	#masthead #primary-menu .show a {
+		border-color: #fff;
+		background: #fff;
+		color: #277375;
+	}
+	#masthead #primary-menu a:hover {
+		background: rgba(255,255,255,.9);
+		border-color: transparent;
+		color: #277375;
+	}
+	/*second tier menu items*/
+	#masthead #primary-menu li .dropdown-menu a.dropdown-item:hover {
+		background: #277375;
+		color: #fff;
+	}
+	#masthead #primary-menu .dropdown-menu {
+		border-radius: 0;
+		border-color: #358182;
+		border-top: 0;
+		margin-left: -1px;
+		margin-top: 0;
+	}
+	/* part of the squisheader animation */
+	.no-scroll #contact-addy {
+		opacity: 1;
+		transition: opacity .2s ease-in-out .3s;
+	}
+	.scrolled #contact-addy {
+		opacity: 0;
+		transition: opacity .1s ease-in-out;
+	}
+	#contact-phone {
+		top: 77px;
+		font-size: 1.3rem;
+		margin-bottom: .5rem;
+		position: absolute;
+		right: 0;
+		transition: top .5s ease-in-out;
+	}
+	/*--------------------------------------------------------------
+	# Header Misc
+	--------------------------------------------------------------*/
+	#content {
+		padding-top: 11rem;
+	}
+	/*--------------------------------------------------------------
+	# Footer
+	--------------------------------------------------------------*/
+	/*keep text closer to middle of page*/
+	#footer-mission {
+		margin-right: 0;
+		margin-top: 1.25rem;
+	}
+	#footer-actions {
+		margin-top: 1.5rem;
+	}
+	.footer-buttons {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	/*--------------------------------------------------------------
+	# For Children
+	--------------------------------------------------------------*/
+	/*hide button as modality menu now fits in one line*/
+	.mod-menu-button {
+		display: none;
+	}
+	/*revert menu back to static state*/
+	.mod-menu {
+		display: flex;
+		position: static;
+		float: none;
+	}
+	/*--------------------------------------------------------------
+	# Practitioner Archive Page
+	--------------------------------------------------------------*/	
+	.knutson-block .practitioner-tile {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	/*cap picture size in large screens*/
+	.knutson-block img {
+		max-width: 350px;
+	}
+	/*alignment of bars and text*/
+	.practitioner-info-box {
+		padding-top: 0.8rem;
+	}
+	/*--------------------------------------------------------------
+	# Testimonial Archive Page
+	--------------------------------------------------------------*/
+/*	.page-template-archivish-testimonials #content {
+		background: linear-gradient(140deg,#8DD9DB ,#74C0C2) fixed;
+	}*/
+	.quote-column {
+		max-width: 60px;
+	}
+	/* bar and diamonds slide out left when over on menu item */
+	.search-by-practitioner:hover .cb-bar{
+		left: 5px;
+		transition: left .2s ease-in-out;
+		-webkit-transition: left .2s ease-in-out;
+		-moz-transition: left .2s ease-in-out;
+		-ms-transition: left .2s ease-in-out;
+		-o-transition: left .2s ease-in-out;
+	}
+	.testimonial-menu-tile {
+		padding-left: 1rem;
+		width: 261px;
+	}
+	.testimonial-menu-tile .cb-bar {
+		width: 20%;
+	}
+	.testimonial-menu-tile .cb-bar:before {
+		content: "";
+		position: absolute;
+		left: -5px;
+		top: -8px;
+		width: 16px;
+		height: 18px;
+		background: url("img/cb-fancy-diamond-42x56.png") no-repeat;
+		background-size: contain;
+	}
+	/*--------------------------------------------------------------
+	# Contact Page
+	--------------------------------------------------------------*/
+	#secure-email-form,
+	#ppl-contact-section {
+		margin-top: 2.5rem;
+	}
+	.contact-page-text {
+		max-width: 80%;
+	}
+	/*Forms*/
+	/*alignment of file attachment buttons*/
+	#contact-page-form .row:nth-child(3) .offset-sm-3 input {
+		padding-left: 40px;
+		overflow: hidden;
+	}
+	input[type="reset"], input[type="submit"] {
+		width: auto;	
+	}
+}
+/*extra big screens*/
+@media(min-width: 1400px) {
+	/*balance diamonds spacing in gutter space*/
+	.cb-bar-1, .cb-bar-2,
+	.cb-bar-3, .cb-bar-4,
+	.cb-bar-5 {
+		margin-left: calc((100vw - 1140px) / 4);
+	}
+	.cb-bar-3 {
+		margin-right: calc((100vw - 1140px) / 4);
+	}
+	/*adjust widths accordingly*/
+	.cb-bar-1, .cb-bar-5 {
+		width: 35%;
+	}
+	.cb-bar-2, .cb-bar-4 {
+		width: 40%;
+	}
+	.scrolled .cb-bar-3 {
+		margin-right: 33%;
+	}
+}
+/*specifically for the hero curvy div*/
+@media(min-width: 992px) and (orientation:landscape){
+	#hero {
+		/*create space for about section*/
+		border-bottom-right-radius: 100% 260px;
+		border-bottom-left-radius: 100% 260px;
+		transition: 0s linear;
+		transition-property: border-bottom-right-radius, border-bottom-left-radius;
+	}
+	#hero .owl-carousel.cb-slider {
+		transition: 0s linear;
+		transition-property: top;
+	}
+	/*keep carousel navigation buttons from being covered by bendy div*/
+	#hero .owl-nav {
+		top: calc(56.25vh - 180px);
+	}
+}
+@media(min-width: 1200px) and (orientation:landscape){
+	/*keep carousel navigation buttons from being covered by bendy div*/
+	#hero .owl-nav {
+		top: calc(50vh - 60px);
+	}
+}
+
+
+/*--------------------------------------------------------------
+	# Temporary section to test different brand colors
+--------------------------------------------------------------*/
+
+/* general text color */
+html body {
+	color: #00281f;
+}
+#masthead #primary-menu li a.dropdown-item {
+	color: #277375; /*cb bar teal*/
+}
+/*gradient background gives the middle bar a fade out affect as it goes behind the site title */
+#masthead .site-title a {
+	background: linear-gradient(#fff 85%, transparent);
+}
+/* bar and diamond colors */
+.cb-bar-1, .cb-bar-2, .cb-bar-4, .cb-bar-5 {
+	border-color: #003b00; /*lydian dark green*/
+	border-color: #174c17; 
+}
+.cb-bar-3 {
+	background: #003b00; /*lydian dark green*/
+	background: #174c17;
+}
+/* site header text colors */
+#masthead .site-title a,
+#masthead .site-description,
+#contact-phone, #contact-addy {
+	color: #733727;
+}
+
+
+/*--------------------------------------------------------------
+	# Riles' Colors
+--------------------------------------------------------------*/
+/*headers*/
+h1, h2, h3, h4, h5, h6 {
+	color: #277375; /*cb-bar teal*/
+}
+/*Make page title brown red*/
+h1.page-title,
+h2.page-title,
+h1.service-title {
+	color: #733727;
+}
+/* site header text colors */
+#contact-phone, #contact-addy {
+	color: #733727; /*oak brown*/
+}
+#masthead .site-title a,
+#masthead .site-description {
+	color: #733727;
+}
+/*header background color*/
+#header-graphic, 
+#masthead .site-title a,
+#masthead .site-description,
+#masthead {
+	background: #fff;
+}
+/*gradient background gives the middle bar a fade out affect as it goes behind the site title */
+#masthead .site-title a {
+	background: white;
+}
+/* left swoop */
+	#primary-menu:before {
+		left: -43px;
+		border-top-right-radius: 84% 50%;
+		/* top right box shadow matches branding */
+		box-shadow: 18px -36px 1px 7px #fff;/*, inset -2px 5px 15px -12px rgba(0,0,0,0.5)*/
+		background: transparent;
+		/* background blends a gray "box shadow" into transparency */
+		background: radial-gradient(circle at bottom -54px left -22px, transparent 87%, rgba(0,0,0,0.5));
+	}
+/* right swoop */
+	#primary-menu:after {
+		right: -43px;
+		border-top-left-radius: 84% 50%;
+		/* top left box shadow matches branding */
+		box-shadow: -18px -36px 1px 7px #fff;/*, inset 2px 5px 15px -12px rgba(0,0,0,0.5)*/
+		background: transparent;
+		/* background blends a gray "box shadow" into transparency */
+		background: radial-gradient(circle at bottom -54px right -22px, transparent 87%, rgba(0,0,0,0.5));
+	}
+/* bar colors */
+.cb-bar-1, .cb-bar-2, .cb-bar-4, .cb-bar-5 {
+	border-color: #277375; /*jackson glen teal*/
+}
+.cb-bar, .cb-bar-3, .practitioner-tile .cb-bar {
+	background: #277375;/*jackson glen teal*/
+}
+
+/*hero*/
+#hero #cb-curved-corners {
+	border-bottom-left-radius: 100% 260px;
+	border-bottom-right-radius: 100% 260px;
+	box-shadow: 0px 125px 0px 28px #186263; /*shades darker*/
+	box-shadow: 0px 125px 0px 28px #549fa1; /*shades lighter*/
+}
+
+/*welcome*/
+#front-page-about {
+	background: #186263; /*darker*/
+	background: linear-gradient(#549fa1, #358182); /*shades lighter to tad lighter*/
+}
+#front-page-about h3,
+#front-page-about p {
+	color: #fff;
+}
+
+/*front page testimonials*/
+.frontpage-testimonial-box {
+	padding: 15px;
+	color: #fff;
+	background-color: #277375;
+	background-color: #358182;
+	min-height: 109px;
+	position: relative;
+	box-sizing: border-box;
+}
+.frontpage-testimonial-box::before {
+	border-bottom: 34px solid #277375;
+	border-bottom: 34px solid #358182;
+  border-left: 20px solid transparent;
+  content: " ";
+  left: 15%;
+  position: absolute;
+  top: 96%;
+  -webkit-transform: rotate(198deg);
+  -moz-transform: rotate(198deg);
+  -ms-transform: rotate(198deg);
+  -ms-transform: rotate(198deg);
+  -o-transform: rotate(198deg);
+  transform: rotate(198deg);
+}
+.frontpage-testimonial-client {
+	margin-top: 40px;
+}
+.frontpage-testimonial-name {
+	font-size: 1.5rem; 
+	font-family: 'Crimson Text', serif;
+}
+
+/*footer*/
+#sub-footer {
+	background: linear-gradient(#358182, #277375); /*tad lighter to original jackson glen teal*/
+}
+.site-info {
+	background-color: #174546;
+	/*background-color: #002a36;*/
+	padding: 5px;
+	color: #fff;
+}
+/*Creative Blazer link*/
+.site-info a {
+	color: #fff;
+}
+#footer-actions {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+#footer-actions .card {
+	background-color: #F4A261; /*orange*/
+	border: 2px solid #186566;
+	border-top: 2px solid #fff;
+	font-size: 1.2rem;
+	border: none;
+	box-shadow: 0px 0px 0px 3px rgba(0,0,0,.2);
+}
+#footer-actions .card:hover {
+	background-color: #DB8948;
+}
+.button-2 {
+	margin-top: 1.35rem;
+}
+#footer-actions .footer-buttons {
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/*set height of google map api*/
+#footer-map {
+	height: 400px;
+	margin-bottom: 3rem;
+}
+.card-header {
+	color: #00281f;
+	color: white;
+}
+
+
+/*for children*/
+/*cascading color theme*/
+.infants,
+.outer-infants-container,
+.infants .mod-menu-button,
+.infants .nav-tabs {
+	background-color: #98E4E5;
+}
+.preschoolers,
+.outer-preschoolers-container,
+.preschoolers .mod-menu-button,
+.preschoolers .nav-tabs {
+	background-color: #77C3C4;
+}
+.gradeschool,
+.outer-gradeschool-container,
+.gradeschool .mod-menu-button,
+.gradeschool .nav-tabs {
+	background-color: #56A2A3;
+}
+.teenager,
+.outer-teenager-container,
+.teenager .mod-menu-button,
+.teenager .nav-tabs {
+	background-color: #358182;
+}
