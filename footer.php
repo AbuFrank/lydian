@@ -23,7 +23,7 @@
 					width="1600"
 					height="400" 
 					frameborder="0" style="border:0" 
-					src= "https://maps.google.com/maps/embed/v1/place?key=AIzaSyBGel9GYEDBv946rwC8gEDSvnwNw6cpaK0&q=777+Concord+Ave,Cambridge+MA"
+					src= "https://maps.google.com/maps/embed/v1/place?key=<map-api-key>&q=777+Concord+Ave,Cambridge+MA"
 					allowfullscreen>
 				</iframe>
 
